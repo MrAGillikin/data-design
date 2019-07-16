@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Entity Relationship Model</title>
+	</head>
+	<body>
+		<h1>Conceptual Model</h1>
+		<h2>Entities and Attributes</h2>
+		<h3>User</h3>
+		<ul>
+			<li>username (primary key)</li>
+			<li>password</li>
+			<li>status</li>
+			<li>userInfo</li>
+		</ul>
+		<h3>Page</h3>
+		<ul>
+			<li>webAddress (primary key)</li>
+			<li>editDate</li>
+			<li>content (possibly subdivided)</li>
+		</ul>
+		<h3>Edit</h3>
+		<ul>
+			<li>editDate (primary key)</li>
+			<li>pageAddress (primary and foreign key)</li>
+			<li>editingUser (foreign key)</li>
+			<li>alteredContent</li>
+		</ul>
+
+		<img src="ERDiagram.png" alt="1 user to many edits. 1 page to many edits." />
+
+		<p><a href="./index.html">Back to Index</a></p>
+	</body>
+</html>

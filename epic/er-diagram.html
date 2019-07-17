@@ -9,22 +9,23 @@
 		<h2>Entities and Attributes</h2>
 		<h3>User</h3>
 		<ul>
-			<li>userName (primary key)</li>
+			<li>userID (primary key)</li>
 			<li>userPassword</li>
 			<li>userStatus</li>
 			<li>userInfo</li>
 		</ul>
-		<h3>Page</h3>
+		<h3>Article</h3>
 		<ul>
-			<li>pageAddress (primary key)</li>
-			<li>pageLastUpdate</li>
-			<li>pageContent (possibly subdivided)</li>
+			<li>articleID (primary key)</li>
+			<li>articleAddress (unique)</li>
+			<li>articleLastUpdate</li>
+			<li>articleContent (possibly subdivided)</li>
 		</ul>
 		<h3>Edit</h3>
 		<ul>
 			<li>editDate (primary key)</li>
-			<li>editPageAddress (primary and foreign key)</li>
-			<li>editIngUser (primary and foreign key)</li>
+			<li>editPageAddress (primary and foreign key) - references articleID</li>
+			<li>editIngUser (primary and foreign key) - references userID</li>
 			<li>editContent</li>
 		</ul>
 
